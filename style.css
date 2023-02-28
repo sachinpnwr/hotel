@@ -67,11 +67,88 @@ nav {
 
 #banner {
     height: 100vh;
-    background-image: url(img/banner3.jpg);
-    background-size: 100% 100%;
+    width: 100%;
+    /* overflow: hidden; */
+    position: relative;
+    min-height: 400px;
+    /* background-image: url(img/banner3.jpg); */
+    /* background-size: 100% 100%; */
+    /* display: flex; */
+}
+
+#banner img{
+    position: absolute;
+    /* left: -100%; */
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
 }
 
 
+#banner .active {
+    display: block;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.booking-portal{
+    display: flex;    
+    text-align: center;
+}
+
+.set-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 38vh;
+    left: 10vw;
+    flex-direction: column;
+    background: rgba(8, 8, 8, 0.7);
+    padding: 30px 60px;
+    height: auto;
+    border-left: 3px solid red;
+}
+
+
+.booking-portal h3{
+    font-size: 25px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    border: none;
+    word-spacing: 7px;
+    letter-spacing: .5px;
+}
+
+.date{
+    width: 100%;
+    /* background: #000; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-transform: uppercase;
+}
+
+.date input[type="date"]{
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+}
+
+.booking-portal button{
+    border-radius: 3px;
+    margin-top: 15px;
+    background: red;
+}
+
+.booking-portal button:hover{
+    background: #000;
+    color: red;
+}
 
 #about {
     display: flex;
@@ -140,9 +217,11 @@ button:hover {
     height: 60vh;
     width: 50vw;
     overflow: hidden;
+    min-height: 225px;
 }
 
 #about-img img {
+    min-height: 225px;
     height: 60vh;
     width: 50vw;
     transition: all 0.5s ease-in;
@@ -199,11 +278,13 @@ button:hover {
     overflow: hidden;
     width: 27vw;
     height: 15vw;
+    min-height: 225px;
 }
 
 .boxes img {
     width: 27vw;
     transition: all 0.5s ease-in;
+    min-height: 225px;
 }
 
 .boxes img:hover {
@@ -250,9 +331,11 @@ button:hover {
     /* height: 22vw; */
     overflow: hidden;
     margin: 2vh 1vw;
+    min-height: 225px;
 }
 
 .art-box img {
+    min-height: 225px;
     width: 25vw;
     height: 33vh;
     transition: all 0.5s ease-in;

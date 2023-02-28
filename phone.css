@@ -46,6 +46,15 @@
 }
 
 @media (max-width:800px) {
+    .set-info{
+        padding: 25px;
+        width: 80vw;
+    }
+
+    .booking-portal h3{
+        font-size: 17px;
+    }
+
     #about {
         padding: 5vh 0;
     }
@@ -69,7 +78,6 @@
     #about-img {
         width: 90%;
         height: 35vh;
-        /* min-height: 300px; */
     }
 
     #about-img img {
@@ -167,3 +175,4 @@
         margin: 5px 10px 0 0;
     }
 }
+
