@@ -77,13 +77,15 @@
 
     #about-img {
         width: 90%;
-        height: 35vh;
+        height: 30vh;
+        overflow: hidden;
+        min-height: 225px;
     }
 
     #about-img img {
         width: 100%;
         height: 30vh;
-        /* min-height: 300px; */
+        min-height: 225px;
     }
 
     .content {
