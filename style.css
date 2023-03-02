@@ -256,6 +256,41 @@ h1::after {
     margin: 15px 0;
 }
 
+#booked-btn {
+    color: white;
+    background: #000;
+    border-radius: 11px;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+}
+
+#booked-btn:hover {
+    background: red;
+    color: white;
+}
+
+#booked-btn.active{
+    background: green;
+    color: white;
+    width: auto;
+    font-size: 12px;
+    padding: 0 7px;
+    transition: all 0s ease-in;
+}
+
+.display{
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    background: green;
+    text-align: center;
+    z-index: 100;
+    font-size: 13px;
+    color: white;
+}
+
 #about-img {
     height: 60vh;
     width: 50vw;
