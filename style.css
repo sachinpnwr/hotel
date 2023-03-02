@@ -17,6 +17,7 @@ nav {
     display: flex;
     justify-content: space-between;
     height: 10vh;
+    min-height: 60px;
     align-items: center;
     background: white;
 }
@@ -140,14 +141,72 @@ nav {
 }
 
 .booking-portal button{
+    
+    
+}
+
+
+
+#booked-btn {
+    color: white;
+    background: #000;
     border-radius: 3px;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
     margin-top: 15px;
     background: red;
 }
 
-.booking-portal button:hover{
-    background: #000;
-    color: red;
+#booked-btn:hover {
+    background: black;
+    color: white;
+}
+
+#booked-btn.active{
+    background: green;
+    color: white;
+    width: auto;
+    font-size: 12px;
+    padding: 0 7px;
+    transition: all 0s ease-in;
+}
+
+.display{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background: green;
+    text-align: center;
+    z-index: 100;
+    font-size: 13px;
+    color: white;
+}
+
+.dot-box{
+    position: relative;
+    bottom: 10vh;
+    left: 10vw;
+    display: flex;
+    width: 70px;
+}
+
+.dots{
+    width: 20px;
+    height: 10px;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 15px;
+    transition: all .5s ease-in;
+}
+
+.dots:not(:last-child){
+    margin-right: 5px;
+}
+
+.dots.active{
+    background: red;
+    transition: all .5s ease-in;
 }
 
 #about {
@@ -195,41 +254,6 @@ h1::after {
     font-size: 16px;
     line-height: 27px;
     margin: 15px 0;
-}
-
-#booked-btn {
-    color: white;
-    background: #000;
-    border-radius: 11px;
-    width: 130px;
-    height: 40px;
-    font-size: 18px;
-    border: none;
-}
-
-#booked-btn:hover {
-    background: red;
-    color: white;
-}
-
-#booked-btn.active{
-    background: green;
-    color: white;
-    width: auto;
-    font-size: 12px;
-    padding: 0 7px;
-    transition: all 0s ease-in;
-}
-
-.display{
-    width: 100%;
-    position: sticky;
-    top: 0px;
-    background: green;
-    text-align: center;
-    z-index: 100;
-    font-size: 13px;
-    color: white;
 }
 
 #about-img {
