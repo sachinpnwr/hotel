@@ -197,7 +197,7 @@ h1::after {
     margin: 15px 0;
 }
 
-button {
+#booked-btn {
     color: white;
     background: #000;
     border-radius: 11px;
@@ -205,12 +205,31 @@ button {
     height: 40px;
     font-size: 18px;
     border: none;
-    transition: all 0.5s ease-in;
 }
 
-button:hover {
+#booked-btn:hover {
     background: red;
-    transition: all 0.5s ease-in;
+    color: white;
+}
+
+#booked-btn.active{
+    background: green;
+    color: white;
+    width: auto;
+    font-size: 12px;
+    padding: 0 7px;
+    transition: all 0s ease-in;
+}
+
+.display{
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    background: green;
+    text-align: center;
+    z-index: 100;
+    font-size: 13px;
+    color: white;
 }
 
 #about-img {
@@ -409,6 +428,21 @@ textarea {
 
 }
 
+button{
+    color: white;
+    background: #000;
+    border-radius: 11px;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+}
+
+button:hover{
+    background: red;
+    color: white;
+    transition: all 0.5s ease-in;
+}
 #user-details button {
     margin-top: 7vh;
 }

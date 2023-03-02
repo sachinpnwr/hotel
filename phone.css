@@ -55,6 +55,10 @@
         font-size: 17px;
     }
 
+    .display{
+        font-size: 11px;
+    }
+
     #about {
         padding: 5vh 0;
     }

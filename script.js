@@ -29,3 +29,46 @@ function changeSlide(moveTo){
 window.onload = setInterval(()=>{
     changeSlide(currentSlide+1);
 },3000)
+
+// Exctract date from fields
+const checkin = document.querySelector('#check-in').value;
+const checkout = document.querySelector('#check-out').value;
+const booked = document.querySelector('#booked-btn');
+const display = document.querySelector('.display');
+booked.addEventListener('click',()=>{
+    const checkin = document.querySelector('#check-in').value;
+    const checkout = document.querySelector('#check-out').value;
+    if(checkin == "" && checkout == ""){
+        display.innerHTML = "Please enter check-in and check-out dates.";
+        display.style.background = "red";
+    }
+    else if(checkin === ""){
+        // console.log('enter checkin date');
+        display.innerHTML = "Please enter check-in date.";
+        display.style.background = "red";
+    }
+    else if(checkout === ""){
+        // console.log('enter checkout date');
+        display.innerHTML = "Please enter check-out date.";
+        display.style.background = "red";
+    }
+    else if(checkin >
+         checkout){
+        // console.log('please enter correct details');
+        display.innerHTML = "Please re-check your check-in and check-out dates.";
+        display.style.background = "red";
+    }
+    else if(checkin === checkout){
+        display.innerHTML = (`Your room successfully booked for ${checkin}.`);
+        display.style.background = "green";
+        booked.innerHTML = "BOOKED SUCCESSFULLY";
+        booked.classList.add('active');
+   }
+    else if(checkin != "" && checkout != ""){
+        display.innerHTML = (`Your room successfully booked from ${checkin} to ${checkout}.`);
+        display.style.background = "green";
+        booked.innerHTML = "BOOKED SUCCESSFULLY";
+        booked.classList.add('active');
+    }
+    
+})
